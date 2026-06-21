@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid rgb(11, 44, 209); */
+}
+
+body {
+  background: #f1fcf680;
+}
+
+/**basic styling**/
+.flex {
+  display: flex;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.nowrapper {
+  flex-wrap: nowrap;
+}
+
+.wrapper {
+  flex-wrap: wrap;
+}
+
+.v-center {
+  align-items: center;
+}
+
+.h-center {
+  justify-content: center;
+}
+.evenly {
+  justify-content: space-evenly;
+}
+.m-left-right {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.around {
+  justify-content: space-around;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #0e0e0e;
+}
+a:hover {
+  color: #131349;
+}
+h1 {
+  color: #e3faf888;
+}
+/**header styling**/
+/**navbar styling**/
+.navbar {
+  height: 7vh;
+  width: 100%;
+  background: rgb(209, 210, 210);
+  position: sticky;
+  top: 0;
+}
+.company-name {
+  font-size: 2.5vh;
+  color: linear-gradient(to right, #04d7fc, #66e51d);
+  font-weight: bold;
+  margin-right: 20px;
+}
+.bar-box {
+  width: 50px;
+  height: 70%;
+  margin-left: 2vw;
+  cursor: pointer;
+}
+.instead-bar {
+  display: none;
+}
+.bar {
+  height: 0.6vh;
+  width: 100%;
+  background: #150808;
+  border-radius: 5px;
+}
+.menu-header {
+  width: 100%;
+  height: 7vh;
+  padding: 1vw;
+  justify-content: flex-end;
+}
+.close-btn {
+  width: 40px;
+  height: 5vh;
+  position: relative;
+  cursor: pointer;
+}
+.close-bar1,
+.close-bar2 {
+  position: absolute;
+  height: 0.5vh;
+  width: 80%;
+  background: #0e0e0e;
+  border-radius: 5px;
+}
+.close-bar1 {
+  transform: rotate(45deg);
+}
+.close-bar2 {
+  transform: rotate(-45deg);
+}
+.offscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70vw;
+  height: 100vh;
+  background: rgb(209, 210, 210);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.offscreen-menu.active {
+  transform: translateX(0);
+}
+
+.offscreen-content1 {
+  margin-left: 30px;
+  line-height: 40px;
+  font-size: 20px;
+}
+.offscreen-content1 li:hover {
+  background: rgba(225, 226, 226, 0.445);
+}
+.offscreen-content2 {
+  margin-top: 50px;
+  margin-left: 30px;
+  line-height: 40px;
+  font-size: 20px;
+  background: rgba(225, 226, 226, 0.445);
+}
+.offscreen-content2 li:hover {
+  background-color: rgb(209, 210, 210);
+}
+/* FOUNDER SECTION STYLING */
+.founders {
+  height: 40vh;
+  width: 100%;
+  margin-top: 5vh;
+  overflow-x: scroll;
+  gap: 5vw;
+}
+.founders::-webkit-scrollbar {
+  display: none;
+}
+.founder {
+  height: 100%;
+  width: 70vw;
+  flex-shrink: 0;
+  flex-grow: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.founder img,
+.co-founder img {
+  height: 80%;
+  width: 100%;
+}
+.founder h5,
+.co-founder h5 {
+  font-size: xx-large;
+  font-family: sans-serif;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+}
+.founder p,
+.co-founder p {
+  font-size: x-large;
+  font-family: sans-serif;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+}
+.co-founder {
+  height: 100%;
+  width: 70vw;
+  flex-shrink: 0;
+  flex-grow: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* FOOTER STYLING */
+footer {
+  margin-top: 25px;
+  background: #1e76cec5;
+  padding: 20px;
+}
+.parent {
+  display: flex;
+  flex-wrap: wrap; /* screen chhoti hogi to next line me chala jayega */
+  gap: 15px;
+}
+
+.box {
+  flex: 1 1 300px; /* grow shrink basis */
+  min-height: 300px;
+  width: calc(35% - 15px);
+  background: rgb(25, 69, 84);
+  border: 1px solid #000;
+}
+@media (min-width: 768px) {
+  .bar-box {
+    width: 6vw;
+  }
+  .offscreen-menu {
+    width: 50%;
+  }
+  .close-btn {
+    width: 50px;
+  }
+  .founders {
+    height: 60vh;
+  }
+  .founder {
+    width: 50%;
+  }
+  .co-founder {
+    width: 50%;
+  }
+  .box {
+    width: calc(50% - 15px);
+  }
+}
+@media (min-width: 1024px) {
+  .company-name {
+    margin-left: 20px;
+  }
+  .bar-box {
+    display: none;
+  }
+  .instead-bar {
+    display: block;
+    width: 40%;
+    margin-right: 20px;
+  }
+  .instead-bar ul {
+    width: 100%;
+  }
+  .instead-bar ul li {
+    font-size: 20px;
+  }
+  .founders {
+    height: 66vh;
+    display: flex;
+    justify-content: center;
+  }
+  .founder {
+    width: 45%;
+  }
+  .co-founder {
+    width: 45%;
+  }
+}
+@media (min-width: 1440px) {
+  .company-name {
+    margin-left: 20px;
+  }
+
+  .founders {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+  }
+  .founder {
+    width: 35%;
+  }
+  .co-founder {
+    width: 35%;
+  }
+}
